@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,82 +8,88 @@
 
     <title>Aliza Webber | Interior Consultant</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    
+
     <link rel="stylesheet" href="public/css/main.css" />
 </head>
+
 <body class="font-sans nav--mobile__closed">
-    <div class="top">
-        <header>
-            <a href="#" class="logo">This interior</a>
-        </header>
-        <nav class="nav">
-            <ul class="nav--mobile__links">
-                <li><a href="#" class="nav--link active">Home</a></li>
-                <li><a href="#" class="nav--link">Collection</a></li>
-                <li><a href="#" class="nav--link">About</a></li>
-                <li><a href="#" class="nav--link">Contact</a></li>
-            </ul>
-
-            <aside class="nav--mobile__aside">
-                <button id="mobile-close" class="nav--trigger close">
-                    <i class="material-icons">close</i>
-                </button>
-                <button id="mobile-open"class="nav--trigger menu">
-                    <i class="material-icons">menu</i>
-                </button>
-            </aside>
-        </nav>
-    </div>
-
-    <main>
-        <article class="hero font-sans">
+    <div class="container">
+        <div class="top">
             <header>
-                <h1 class="font-serif">Modern interior</h1>
+                <a href="#" class="logo">This interior</a>
             </header>
-            <div class="content">
-                <p>A full-service residential &amp; commercial interior design and staging company offering organizing &amp; eco-services.</p>
-            </div>
-            <footer>
-                <a href="#">
-                    <span>Read more</span>
-                    <i class="material-icons">arrow_right_alt</i>
-                </a>
-            </footer>
-        </article>
-        <section>
-            <article>
-                <figure>
-                    <img src="public/img/interior-320w.jpg" alt="Interior shot with a painting, pillows and more"
-                        srcset="public/img/interior.jpg 1474w, public/img/interior-1024w.jpg 1024w, public/img/interior-640w.jpg 640w, public/img/interior-320w.jpg 320w" />
-                </figure>
-                <div class="post-card">
-                    <header>
-                        <div class="post-avatar">
-                            <img src="public/img/avatar.png" alt="Aliza Webber" />
-                        </div>
-                        <div class="post-author">
-                            <a href="#">Aliza Webber</a>
-                            <small>Interior designer</small>
-                        </div>
-                    </header>
-                    <div class="post-content">
-                        <a href="#">
-                            <h2 class="font-serif">
-                                Designed in 2020 by<br/> Aliza Webber
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
+            <nav class="nav">
+                <ul class="nav--links">
+                    <li><a href="#" class="nav--link active">Home</a></li>
+                    <li><a href="#" class="nav--link">Collection</a></li>
+                    <li><a href="#" class="nav--link">About</a></li>
+                    <li><a href="#" class="nav--link">Contact</a></li>
+                </ul>
 
-    <footer class="font-sans">
-        <p>Thinkverse @ <a href="https://devchallenges.io">DevChallenges.io</a></p>
-    </footer>
+                <aside class="nav--mobile__aside">
+                    <button id="mobile-close" class="nav--trigger close">
+                        <i class="material-icons">close</i>
+                    </button>
+                    <button id="mobile-open" class="nav--trigger menu">
+                        <i class="material-icons">menu</i>
+                    </button>
+                </aside>
+            </nav>
+        </div>
+
+        <main>
+            <article class="hero font-sans">
+                <header>
+                    <h1 class="font-serif">Modern interior</h1>
+                </header>
+                <div class="content">
+                    <p>A full-service residential &amp; commercial interior design and staging company offering
+                        organizing &amp; eco-services.</p>
+                </div>
+                <footer>
+                    <a href="#">
+                        <span>Read more</span>
+                        <i class="material-icons">arrow_right_alt</i>
+                    </a>
+                </footer>
+            </article>
+            <section class="post">
+                <article>
+                    <figure>
+                        <img src="public/img/interior-320w.jpg" alt="Interior shot with a painting, pillows and more"
+                            srcset="public/img/interior.jpg 1474w, public/img/interior-1024w.jpg 1024w, public/img/interior-640w.jpg 640w, public/img/interior-320w.jpg 320w" />
+                    </figure>
+                    <div class="post-card">
+                        <header>
+                            <div class="post-avatar">
+                                <img src="public/img/avatar.png" alt="Aliza Webber" />
+                            </div>
+                            <div class="post-author">
+                                <a href="#">Aliza Webber</a>
+                                <small>Interior designer</small>
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <a href="#">
+                                <h2 class="font-serif">
+                                    Designed in 2020 by<br /> Aliza Webber
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="font-sans">
+            <p>Thinkverse @ <a href="https://devchallenges.io">DevChallenges.io</a></p>
+        </footer>
+    </div>
 
     <script src="public/js/nav.js"></script>
 </body>
+
 </html>

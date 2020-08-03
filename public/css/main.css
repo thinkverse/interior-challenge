@@ -18,7 +18,7 @@ body {
     display: inline-block;
 }
 
-.nav--mobile__closed .nav--mobile__links,
+.nav--mobile__closed .nav--links,
 .nav--mobile__closed .nav--trigger.close,
 .nav--mobile__open .nav--trigger.menu {
     display: none;
@@ -76,12 +76,12 @@ figure img {
     font-size: 32px !important;
 }
 
-.nav--mobile__links {
+.nav--links {
     list-style-type: none;
     margin: 0; padding: 0;
 }
 
-.nav--mobile__open .nav--mobile__links {
+.nav--mobile__open .nav--links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,7 +89,7 @@ figure img {
     height: 100%;
 }
 
-.nav--mobile__links > li + li {
+.nav--links > li + li {
     margin-top: 2em;
 }
 
@@ -103,38 +103,38 @@ figure img {
     font-weight: 600;
 }
 
-body > main + footer {
-    margin-top: 4rem;
+.container > main + footer {
+    margin-top: 6rem;
 }
 
 main {
     margin: 0 20px;
 }
 
-main > .hero + section {
+main > .hero + .post {
     margin-top: 2.5rem;
 }
 
-main .hero {
+.hero {
     margin-top: 3rem;
 }
 
-main article header h1 {
+.hero header h1 {
     font-weight: normal;
     font-size: 2.3rem;
 }
 
-main > article .content {
+.hero .content {
     width: 80%;
 }
 
-main article .content p {
+.hero .content p {
     font-weight: 300;
     font-size: 0.9rem;
     line-height: 1.5rem;
 }
 
-main article footer a {
+.hero footer a {
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -142,7 +142,7 @@ main article footer a {
     text-decoration: none;
 }
 
-main article footer a > * + * {
+.hero footer a > * + * {
     margin-left: 1rem;
 }
 
@@ -217,16 +217,16 @@ main section article figure {
     font-size: 1.1rem;
 }
 
-body > footer {
+.container > footer {
     width: 80%;
-    margin: 0 auto;
+    margin: 2rem auto;
     text-align: center;
     border-top: 1px solid #A9A9A9;
     color: #A9A9A9;
     font-size: 0.9rem;
 }
 
-body > footer a {
+.container > footer a {
     color: #A9A9A9;
     text-decoration: none;
 }
@@ -237,11 +237,109 @@ body > footer a {
         margin: 30px 25px;
     }
 
-    .nav--mobile__links > li + li {
+    .nav--links > li + li {
         margin-top: 3em;
     }
 
     .nav--trigger {
         padding: 15px;
+    }
+}
+
+@media(min-width: 1023px) {
+    .nav--mobile__closed .nav--mobile__aside,
+    .nav--mobile__open .nav--mobile__aside,
+    .nav--mobile__aside {
+        display: none;
+    }
+
+    .nav--mobile__closed .nav--links,
+    .nav--mobile__open .nav--links,
+    .nav--mobile__closed .nav,
+    .nav--mobile__open .nav {
+        position: relative;
+        display: inline-block;
+        height: auto;
+        width: auto;
+    }
+
+    .container {
+        min-width: 1024px;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+
+    .top {
+        margin-top: 3rem;
+    }
+
+    .top header {
+        margin: 0;
+    }
+
+    .nav--links li {
+        display: inline-block;
+    }
+
+    .nav--links > li + li {
+        margin-top: 0;
+        margin-left: 7rem;
+    }
+    
+    .container .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+    .container > main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 6rem 0;
+    }
+
+    .container .hero {
+        width: 40%;
+    }
+
+    .container .post {
+        width: 60%;
+        max-width: 740px;
+    }
+
+    .container .hero header h1 {
+        font-size: 3.3rem;
+    }
+    
+    .container .hero .content p {
+        font-size: 1.2rem;
+        line-height: 2.3rem;
+    }
+
+    .container .hero .content {
+        margin-bottom: 3rem;
+    }
+    
+    .container .hero footer a {
+        font-size: 1.2rem;
+    }
+    
+    .container .hero footer a > * + * {
+        margin-left: 1rem;
+    }
+
+    .container .post .post-card {
+        min-width: 300px;
+        max-width: 60%;
+        padding: 1.5rem;
+        box-shadow: none;
+    }
+
+    .container > footer {
+        border-top: 0;
     }
 }
