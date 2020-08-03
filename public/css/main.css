@@ -143,7 +143,12 @@ main > .hero + .post {
 }
 
 .hero footer a > * + * {
+    transition: margin 0.4s;
     margin-left: 1rem;
+}
+
+.hero footer a:hover > * + * {
+    margin-left: 2rem;
 }
 
 main section article {
@@ -206,6 +211,10 @@ main section article figure {
     line-height: 0.7rem;
 }
 
+.post-card .post-content {
+    width: 60%;
+}
+
 .post-card .post-content a {
     text-decoration: none;
     color: #FFFFFF;
@@ -243,6 +252,17 @@ main section article figure {
 
     .nav--trigger {
         padding: 15px;
+    }
+
+    .container .post .post-card {
+        min-width: 300px;
+        max-width: 60%;
+        padding: 1.5rem;
+        box-shadow: none;
+    }
+
+    .post-card .post-content {
+        width: 100%;
     }
 }
 
@@ -285,6 +305,16 @@ main section article figure {
     .nav--links > li + li {
         margin-top: 0;
         margin-left: 7rem;
+    }
+
+    .nav--links li a {
+        padding: 0.5rem;
+        border-bottom: 2px solid #181719;
+        transition: border 0.3s;
+    }
+
+    .nav--links li a:hover {
+        border-bottom: 2px solid #FFFFFF;
     }
     
     .container .top {
@@ -331,10 +361,14 @@ main section article figure {
     .container .hero footer a > * + * {
         margin-left: 1rem;
     }
+    
+    .container .hero footer a:hover > * + * {
+        margin-left: 4rem;
+    }
 
     .container .post .post-card {
-        min-width: 300px;
-        max-width: 60%;
+        min-width: 400px;
+        max-width: 70%;
         padding: 1.5rem;
         box-shadow: none;
     }
