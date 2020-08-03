@@ -92,3 +92,13 @@ figure img {
 .nav--link.active {
     font-weight: 600;
 }
+
+@media(min-width: 767px) {
+    .nav--mobile__links > li + li {
+        margin-top: 3em;
+    }
+
+    .nav--trigger {
+        padding: 15px;
+    }
+}
