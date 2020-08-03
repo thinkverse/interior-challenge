@@ -12,19 +12,29 @@
     
     <link rel="stylesheet" href="public/css/main.css" />
 </head>
-<body class="font-sans">
-    <header>
-        <a href="#">This interior</a>
-    </header>
-    <nav>
-        <span class="mobile">
-            <i class="icon"></i>
-        </span>
-        <a href="#">Home</a>
-        <a href="#">Collection</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+<body class="font-sans nav--mobile__closed">
+    <div class="top">
+        <header>
+            <a href="#" class="font-serif logo">This interior</a>
+        </header>
+        <nav class="nav">
+            <ul class="nav--mobile__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <aside class="nav--mobile__aside">
+                <button id="mobile-close" class="nav--trigger close">
+                    <i class="material-icons">close</i>
+                </button>
+                <button id="mobile-open"class="nav--trigger menu">
+                    <i class="material-icons">menu</i>
+                </button>
+            </aside>
+        </nav>
+    </div>
 
     <main>
         <article>
@@ -68,5 +78,7 @@
     <footer>
         <p>Thinkverse @ <a href="https://devchallenges.io">DevChallenges.io</a></p>
     </footer>
+
+    <script src="/public/js/nav.js"></script>
 </body>
 </html>
