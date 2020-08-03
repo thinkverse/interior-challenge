@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200  Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
+
 body {
     background-color: #181719;
     color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .font-sans {
@@ -13,15 +16,12 @@ body {
     font-family: "Lora", Georgia, 'Times New Roman', Times, serif;
 }
 
-.nav--mobile__closed .nav--trigger.close,
-.nav--mobile__open .nav--trigger.menu {
-    display: inline-block;
+.nav--links {
+    display: none;
 }
 
-.nav--mobile__closed .nav--links,
-.nav--mobile__closed .nav--trigger.close,
-.nav--mobile__open .nav--trigger.menu {
-    display: none;
+.body:is(.nav--open) .nav--links {
+    display: inline;
 }
 
 figure img {
@@ -48,16 +48,17 @@ figure img {
     position: absolute;
     top: 0; bottom: 0;
     left: 0; right: 0;
-    transition: height 0.3s ease-out;
+    transform: translateY(1);
+    transform-origin: top;
     height: 0;
 }
 
-.nav--mobile__open .nav {
+.nav--open .nav {
     position: fixed;
     width: 100%; height: 100%;
 }
 
-.nav--mobile__closed .nav {
+.nav {
     height: 0;
 }
 
@@ -82,7 +83,7 @@ figure img {
     margin: 0; padding: 0;
 }
 
-.nav--mobile__open .nav--links {
+.nav--open .nav--links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,16 +269,14 @@ main section article figure {
 }
 
 @media(min-width: 1023px) {
-    .nav--mobile__closed .nav--mobile__aside,
-    .nav--mobile__open .nav--mobile__aside,
     .nav--mobile__aside {
         display: none;
     }
 
-    .nav--mobile__closed .nav--links,
-    .nav--mobile__open .nav--links,
-    .nav--mobile__closed .nav,
-    .nav--mobile__open .nav {
+    .nav--open .nav--links,
+    .nav--open .nav,
+    .nav--links,
+    .nav {
         position: relative;
         display: inline-block;
         height: auto;

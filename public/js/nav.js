@@ -1,1 +1,27 @@
-window.addEventListener('DOMContentLoaded',event=>{l("Welcome to the console, it's good to see you. 🤘",'secret');const documentBody=document.querySelector('body'),navCloseTrigger=document.querySelector('#mobile-close'),navOpenTrigger=document.querySelector('#mobile-open');let navIsOpen=false;function toggleNavigation(){if(navIsOpen){documentBody.classList.remove('nav--mobile__open');documentBody.classList.add('nav--mobile__closed');return navIsOpen=!navIsOpen}documentBody.classList.remove('nav--mobile__closed');documentBody.classList.add('nav--mobile__open');return navIsOpen=!navIsOpen}navCloseTrigger.onclick=toggleNavigation;navOpenTrigger.onclick=toggleNavigation});function l(msg,type){const base=["color: #fff","background-color: #444","padding: 2px 4px","border-radius: 2px"].join(';');const ajax=["color: #eee","background-color: red"].join(';');const dom=["background-color: gray"].join(';');const success=["background-color: green"].join(';');const secret=["background-color: #303036"].join(';');let style=base+';',badge='';switch(type){case 'ajax':style+=ajax;badge='AJAX';break;case 'dom':style+=dom;badge='DOM';break;case 'success':style+=success;badge='Success';break;case 'secret':style+=secret;badge='🔥';break;default:badge='Info';break}console.log(`%c${ badge }%c ${ msg }`,style,'')}
+window.addEventListener('DOMContentLoaded', event => {
+    const documentBody = document.querySelector('body'),
+        navToggle = document.querySelector('#mobile-toggle');
+    let navIsOpen = false;
+
+    function toggleNavigation() {
+        if (navIsOpen) {
+            documentBody
+                .classList
+                .toggle('nav--open');
+
+            navToggle.children[0].textContent = 'menu';
+
+            return navIsOpen = !navIsOpen
+        }
+
+        documentBody
+            .classList
+            .toggle('nav--open');
+
+        navToggle.children[0].textContent = 'close';
+
+        return navIsOpen = !navIsOpen
+    }
+
+    navToggle.onclick = toggleNavigation;
+});
