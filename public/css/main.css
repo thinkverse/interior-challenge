@@ -51,6 +51,7 @@ figure img {
     transform: translateY(1);
     transform-origin: top;
     height: 0;
+    display: block;
 }
 
 .nav--open .nav {

@@ -15,25 +15,25 @@
     <link rel="stylesheet" href="public/css/main.css" />
 </head>
 
-<body class="font-sans nav--mobile__closed">
+<body class="font-sans">
     <div class="container">
         <div class="top">
             <header>
                 <a href="#" class="logo">This interior</a>
             </header>
-            <nav class="nav">
-                <ul class="nav--links">
+            <nav class="nav" role="navigation">
+                <aside class="nav--mobile__aside">
+                    <button id="mobile-toggle" aria-expanded="false" aria-controls="navigation" class="nav--trigger">
+                        <i class="material-icons">menu</i>
+                    </button>
+                </aside>
+
+                <ul id="navigation" class="nav--links">
                     <li><a href="#" class="nav--link active">Home</a></li>
                     <li><a href="#" class="nav--link">Collection</a></li>
                     <li><a href="#" class="nav--link">About</a></li>
                     <li><a href="#" class="nav--link">Contact</a></li>
                 </ul>
-
-                <aside class="nav--mobile__aside">
-                    <button id="mobile-toggle" class="nav--trigger">
-                        <i class="material-icons">menu</i>
-                    </button>
-                </aside>
             </nav>
         </div>
 

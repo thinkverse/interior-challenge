@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 .classList
                 .toggle('nav--open');
 
+            navToggle.setAttribute('aria-expanded', 'false');
             navToggle.children[0].textContent = 'menu';
 
             return navIsOpen = !navIsOpen
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', event => {
             .classList
             .toggle('nav--open');
 
+        navToggle.setAttribute('aria-expanded', 'true');
         navToggle.children[0].textContent = 'close';
 
         return navIsOpen = !navIsOpen
